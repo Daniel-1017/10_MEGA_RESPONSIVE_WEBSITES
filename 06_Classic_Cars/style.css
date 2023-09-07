@@ -219,3 +219,26 @@ section.change {
   box-shadow: 0.1rem 0.1rem 0.5rem #bbb;
 }
 /* End of Section 2 */
+
+/* Section 3 */
+.section-3 {
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  justify-content: space-around;
+}
+
+.video {
+  width: 25%;
+  opacity: 0.8;
+  margin: 0 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+  box-shadow: 0.3rem 0.3rem 0.5rem #111;
+}
+
+.video:hover {
+  opacity: 1;
+  box-shadow: 0.5rem 0.5rem 1rem #111;
+}
+/* End of Section 3 */
