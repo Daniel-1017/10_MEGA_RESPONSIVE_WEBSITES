@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Special+Elite&display=swap");
+
+/* 
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Special Elite', cursive;
+*/
+
+/* Common Styles */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-weight: 400;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: "Special Elite", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #ccc;
+}
+/* End of Common Styles */
