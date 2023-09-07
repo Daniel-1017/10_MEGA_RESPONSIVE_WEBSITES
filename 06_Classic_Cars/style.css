@@ -26,6 +26,12 @@ body {
   padding-right: 3rem;
   background-color: #ccc;
 }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* End of Common Styles */
 
 /* Menu */
@@ -35,13 +41,10 @@ body {
   z-index: 10;
   width: 4rem;
   height: 4rem;
-  display: flex;
   position: fixed;
   cursor: pointer;
-  align-items: center;
   transition: all 0.5s;
   flex-direction: column;
-  justify-content: center;
 }
 
 .menu.change {
@@ -123,4 +126,32 @@ section.change {
   left: 15vw;
   transform: rotateY(10deg);
 }
+
+.section-heading {
+  color: #fff;
+  font-size: 10rem;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 10rem;
+  letter-spacing: 1rem;
+  text-shadow: 0.3rem 0.3rem 0.5rem #555;
+}
 /* End of Common Section Styles */
+
+/* Section 1 */
+.section-1 {
+  flex-direction: column;
+  background-size: cover;
+  background: url(images/bg-section1.jpg) center no-repeat;
+}
+
+.section-1 .section-1-heading {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  text-shadow: 1rem 1rem 1rem #000, 2rem 2rem 2rem #111, 3rem 3rem 3rem #222;
+}
+
+.section-1-img {
+  width: 70%;
+}
+/* End of Section 1 */
