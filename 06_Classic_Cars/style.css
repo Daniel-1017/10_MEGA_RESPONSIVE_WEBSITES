@@ -19,9 +19,77 @@ font-family: 'Special Elite', cursive;
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
+  padding-right: 3rem;
   background-color: #ccc;
 }
 /* End of Common Styles */
+
+/* Menu */
+.menu {
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  transition: left 0.5s;
+  background-color: red;
+}
+
+.menu.change {
+  left: 15vw;
+}
+/* End of Menu */
+
+/* Navbar */
+.navbar {
+  top: 0;
+  left: -15vw;
+  z-index: 10;
+  width: 15vw;
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  transition: left 0.5s;
+  flex-direction: column;
+  padding: 4rem 0 0 4rem;
+  background-color: #fff;
+}
+
+.navbar.change {
+  left: 0;
+}
+
+.navbar-link {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+/* End of Navbar */
+
+/* Common Section Styles */
+.wrapper {
+  width: 100%;
+  perspective: 50rem;
+}
+
+section {
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-bottom: 3rem;
+  transition: left 0.5s, transform 0.5s;
+  transform-origin: left;
+  background-color: #efefef;
+  box-shadow: 0.5rem 0.5rem 1rem #aaa;
+}
+
+section.change {
+  left: 15vw;
+  transform: rotateY(10deg);
+}
+/* End of Common Section Styles */
