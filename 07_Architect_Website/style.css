@@ -24,7 +24,12 @@ html {
   position: fixed;
   cursor: pointer;
   flex-direction: column;
+  transition: right 0.7s;
   justify-content: space-evenly;
+}
+
+.change .hamburger-menu {
+  right: 33rem;
 }
 
 .line {
@@ -32,6 +37,59 @@ html {
   height: 0.2rem;
   background-color: #fff;
   box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.change .line {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.change .line-1 {
+  transform: rotate(45deg) translate(0.3rem, 0.8rem);
+}
+
+.change .line-2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .line-3 {
+  transform: rotate(-45deg) translate(0.3rem, -0.8rem);
+}
+
+.hamburger-menu span {
+  left: 5rem;
+  opacity: 0;
+  width: 10rem;
+  height: 4rem;
+  color: #fff;
+  display: flex;
+  font-size: 1.6rem;
+  visibility: hidden;
+  position: absolute;
+  align-items: center;
+  transition: all 0.2s;
+  letter-spacing: 0.1rem;
+  justify-content: center;
+  background-color: #e2b646;
+  font-family: "Baloo Da 2", sans-serif;
+}
+
+.change .hamburger-menu:hover span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hamburger-menu span::before {
+  top: 50%;
+  left: -2rem;
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  border-right: 1rem solid #e2b646;
+  border-top: 1rem solid transparent;
+  border-left: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
 }
 /* End of Hamburger Menu */
 
@@ -125,3 +183,79 @@ html {
   }
 }
 /* End of Header */
+
+/* Sidebar */
+.sidebar {
+  top: 0;
+  width: 40rem;
+  right: -40rem;
+  height: 100vh;
+  position: fixed;
+  transition: right 0.5s;
+  background-color: #fff;
+}
+
+.change .sidebar {
+  right: 0;
+}
+
+.menu {
+  top: 40%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.menu-item {
+  text-align: center;
+}
+
+.menu-link {
+  color: #555;
+  font-size: 4rem;
+  position: relative;
+  font-family: "Baloo Da 2", sans-serif;
+}
+
+.menu-link::before {
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  color: #c29525;
+  position: absolute;
+  white-space: nowrap;
+  content: attr(data-content);
+  transition: width 0.3s ease-in-out;
+}
+
+.menu-link:hover::before {
+  width: 100%;
+}
+
+.social-media {
+  width: 100%;
+  bottom: 3rem;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+
+.social-media i {
+  margin: 3rem;
+  display: flex;
+  color: #fff;
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 2.2rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #777;
+  transition: background-color 0.3s;
+}
+
+.social-media i:hover {
+  background-color: #c29525;
+}
+/* End of Sidebar */
