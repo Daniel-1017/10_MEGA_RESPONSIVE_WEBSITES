@@ -209,6 +209,7 @@ html {
 /* Sidebar */
 .sidebar {
   top: 0;
+  z-index: 100;
   width: 40rem;
   right: -40rem;
   height: 100vh;
@@ -472,3 +473,170 @@ html {
   box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
 }
 /* End of Team */
+
+/* Contact */
+.contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #272727;
+}
+
+.contact-wrapper {
+  width: 60%;
+  display: flex;
+  height: 75rem;
+  box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.5);
+}
+
+.contact-left {
+  width: 35%;
+  background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
+    url(images/contact-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.contact-right {
+  width: 65%;
+  background-color: #eee;
+  padding: 3rem 10rem 10rem;
+}
+
+.contact-heading {
+  font-size: 6rem;
+  font-weight: 300;
+  color: #272727;
+  text-align: center;
+  margin-bottom: 5rem;
+  font-family: "Baloo Da 2", sans-serif;
+}
+
+.contact-right form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+}
+
+.field {
+  width: 45rem;
+  border: none;
+  margin: 3rem 0;
+  color: #4b4b4b;
+  font-size: 1.6rem;
+  padding: 1rem 1rem 1rem 0;
+  background-color: transparent;
+  font-family: "Muli", sans-serif;
+  border-bottom: 0.2rem dashed #636363;
+}
+
+.input-group input {
+  height: 4rem;
+}
+
+.input-group textarea {
+  max-width: 45rem;
+  max-height: 7rem;
+}
+
+.field:focus {
+  border-bottom-style: solid;
+}
+
+.input-group label {
+  left: 0;
+  color: #4b4b4b;
+  font-size: 1.8rem;
+  position: absolute;
+  transition: all 0.3s;
+  pointer-events: none;
+  text-transform: uppercase;
+  font-family: "Baloo Da 2", sans-serif;
+}
+
+.input-label {
+  bottom: 3rem;
+}
+
+.message {
+  bottom: 6rem;
+}
+
+.field:focus ~ label {
+  font-size: 1.2rem;
+  transform: translateY(-3rem);
+}
+
+.submit-btn {
+  width: 45rem;
+  height: 5rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  background-color: #c29525;
+  font-family: "Muli", sans-serif;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+/* End of Contact */
+
+/* Footer */
+.footer {
+  width: 100%;
+  display: flex;
+  height: 15rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #17181e;
+}
+
+.footer-content {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  color: #a7a7a7;
+  font-size: 1.6rem;
+  font-family: "Baloo Da 2", sans-serif;
+}
+
+.social-list a {
+  margin: 0 2rem;
+}
+
+.social-list i {
+  font-size: 2rem;
+  color: #a7a7a7;
+}
+/* End of Footer */
+
+/* Scroll Btn */
+.scroll-btn {
+  right: 5rem;
+  display: flex;
+  bottom: 5rem;
+  width: 4.5rem;
+  color: #fff;
+  height: 4.5rem;
+  position: fixed;
+  font-size: 2.2rem;
+  align-items: center;
+  border-radius: 0.3rem;
+  justify-content: center;
+  background-color: #e2b646;
+  box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+/* End of Scroll Btn */
