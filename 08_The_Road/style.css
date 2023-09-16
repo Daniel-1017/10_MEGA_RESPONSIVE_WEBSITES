@@ -123,53 +123,6 @@ html {
 }
 /* End of Header */
 
-/* Animations */
-@keyframes drop-letters {
-  0% {
-    transform: translateY(0);
-  }
-  10% {
-    transform: translateY(0);
-  }
-  15% {
-    transform: translateY(-100%);
-  }
-  20% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes image-float {
-  0% {
-    transform: translateZ(40rem);
-    opacity: 1;
-  }
-  40% {
-    transform: translateZ(-500rem) translateX(150rem);
-    opacity: 0.8;
-  }
-  70% {
-    transform: translateZ(-1500rem) translateX(800rem);
-    opacity: 0.6;
-  }
-  80% {
-    transform: translateZ(-50rem) translateX(100rem);
-    opacity: 0.8;
-  }
-  80% {
-    transform: translateZ(-50rem) translateX(100rem);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateZ(40rem);
-    opacity: 1;
-  }
-}
-/* End of Animations */
-
 /* Popular Tours */
 .popular-tours {
   padding: 5rem 0 10rem 0;
@@ -296,3 +249,120 @@ html {
   cursor: pointer;
 }
 /* End of Popular Tours */
+
+/* Stories */
+.stories {
+  padding: 10rem 0;
+  position: relative;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stories-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-bg {
+  width: 70%;
+  margin: 5rem;
+  padding: 5rem;
+  transform: skewX(20deg);
+  background-color: rgba(238, 238, 238, 0.85);
+  box-shadow: 0 2rem 5rem rgba(51, 51, 51, 0.4);
+}
+
+.story {
+  transform: skewX(-20deg);
+  display: flex;
+}
+
+.story-text {
+  letter-spacing: 0.1rem;
+}
+
+.story-image {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 5rem;
+}
+
+.story-heading {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--grey-color);
+  margin-bottom: 1rem;
+}
+
+.story-paragraph {
+  font-size: 1.8rem;
+  color: var(--grey-color);
+}
+
+.story-paragraph::first-letter {
+  margin-left: 1rem;
+}
+/* End of Stories */
+
+/* Animations */
+@keyframes drop-letters {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-100%);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes image-float {
+  0% {
+    transform: translateZ(40rem);
+    opacity: 1;
+  }
+  40% {
+    transform: translateZ(-500rem) translateX(150rem);
+    opacity: 0.8;
+  }
+  70% {
+    transform: translateZ(-1500rem) translateX(800rem);
+    opacity: 0.6;
+  }
+  80% {
+    transform: translateZ(-50rem) translateX(100rem);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translateZ(-50rem) translateX(100rem);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateZ(40rem);
+    opacity: 1;
+  }
+}
+/* End of Animations */
