@@ -14,6 +14,9 @@ Array.from(document.querySelectorAll(".nav-link")).forEach((item, i) => {
   item.style.cssText = `
     background-color: ${colors[i]};
   `;
+  item.addEventListener("click", () => {
+    container.classList.remove("change");
+  });
 });
 
 Array.from(document.querySelectorAll(".navigation-button")).forEach((item) => {
