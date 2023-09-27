@@ -81,6 +81,12 @@ html {
   align-items: center;
 }
 
+/* Menu */
+.menu {
+  display: none;
+}
+/* End of Menu */
+
 .nav-list {
   display: flex;
 }
@@ -120,6 +126,10 @@ html {
   flex-direction: column;
 }
 
+.dropdown-heading {
+  display: none;
+}
+
 .nav-dropdown-link-1 {
   font-size: 1.6rem;
   color: #fff;
@@ -145,10 +155,6 @@ html {
   font-size: 1.5rem;
   margin-left: 0.5rem;
   transition: transform 0.3s;
-}
-
-.nav-list-item:hover .nav-list-link i {
-  transform: rotateZ(180deg);
 }
 
 .navbar-btn {
@@ -647,6 +653,13 @@ html {
     padding: 0 5rem;
   }
 
+  .navbar-logo {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   .menu {
     width: 11rem;
     height: 4rem;
@@ -656,7 +669,15 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+  }
+
+  .change .menu {
     transform: translateX(16rem);
+    position: fixed;
+    top: 2rem;
+    left: 6rem;
+    background-color: #eee;
   }
 
   .menu-icon {
@@ -670,6 +691,22 @@ html {
     width: 2rem;
     height: 0.1rem;
     background-color: #fff;
+    transform-origin: left;
+  }
+
+  .change .line-1 {
+    rotate: 45deg;
+    background-color: #444;
+  }
+
+  .change .line-2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .change .line-3 {
+    rotate: -45deg;
+    background-color: #444;
   }
 
   .menu span {
@@ -677,20 +714,31 @@ html {
     color: #fff;
   }
 
+  .change .menu span {
+    color: #555;
+  }
+
   .nav-list,
-  .nav-dropdown-personal {
+  .nav-dropdown-personal,
+  .nav-dropdown-business {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -20rem;
     width: 20rem;
     height: 100vh;
     background: linear-gradient(to bottom, #032181, #094399, #04207c);
     flex-direction: column;
     padding-top: 2rem;
     z-index: 200;
+    transition: left 0.6s cubic-bezier(1, 0, 0, 1);
   }
 
-  .nav-dropdown-personal {
+  .change .nav-list {
+    left: 0;
+  }
+
+  .nav-dropdown-personal,
+  .nav-dropdown-business {
     opacity: 1;
     visibility: visible;
     padding: 1rem;
@@ -700,6 +748,10 @@ html {
   .nav-dropdown-item {
     width: 100%;
     margin: 1rem 1rem 0 1rem;
+  }
+
+  .dropdown-heading {
+    display: block;
   }
 
   .dropdown-heading a {
@@ -729,6 +781,10 @@ html {
     margin: 0.4rem 0;
   }
 
+  .nav-list-item:hover {
+    border-bottom: none;
+  }
+
   .nav-list-link {
     font-size: 1.4rem;
   }
@@ -738,12 +794,8 @@ html {
     rotate: -90deg;
   }
 
-  .nav-list-item:hover {
-    border-bottom: none;
-  }
-
-  .nav-dropdown-business {
-    display: none;
+  .navbar-buttons {
+    margin-left: auto;
   }
 }
 /* End of Responsive */
