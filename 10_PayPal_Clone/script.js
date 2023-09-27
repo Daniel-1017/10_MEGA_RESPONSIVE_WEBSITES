@@ -71,4 +71,7 @@ if (window.innerWidth < 1000) {
   });
 }
 
+window.addEventListener("resize", () => {
+  window.location.reload();
+});
 // End of Navigation
